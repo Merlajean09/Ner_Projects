@@ -5,11 +5,11 @@ body {
 }
 .sidebar {
     height: 100%;
-    width: 200px;
+    width: 150px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #e96a5b;
+    background-color: #ff79f4;
     padding-top: 20px;
 }
 .sidebar a {
@@ -19,11 +19,11 @@ body {
     text-decoration: none;
 }
 .sidebar a:hover {
-    background-color: #c69cbc;
+    background-color: #8b046c;
 }
 .content {
     margin-left: 100px;
-    padding: 5px;
+    padding: 10px ;
     background-color: #a1a0ad;
     text-align: center;
 }

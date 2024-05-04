@@ -22,41 +22,43 @@
                 <input type="submit" value="Login">
             </div>
         </form>
+        <div id="message" style="display: none; color: red;">
+           
+        </div>
     </div>
     <script>
-            document.getElementById('login-form').addEventListener('submit',function(event){
-                event.preventDefault();
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-                const formData = new FormData(this);
+            const formData = new FormData(this);
 
-                fetch('api/welcome',{
-                    method: 'POST',
-                    body: formData,
-                    headers: {
+            fetch('api/welcome', {
+                method: 'POST',
+                body: formData,
+                headers: {
                     Accept: 'application/json',
                     Authorization: 'Bearer' + localStorage.getItem('accessToken'),
-
-
-                    }
-
-                }).then(res => {
-                    console.log(res);
-                    return res.json();
-
-                }).then(res => {
-                    console.log(res);
-                    if(res.accessToken) {
+                }
+            }).then(res => {
+                console.log(res);
+                return res.json();
+            }).then(res => {
+                console.log(res);
+                if (res.accessToken) {
                     localStorage.setItem('accessToken', res.accessToken);
                     window.location.href = '/dashboard';
-                 } else {
+                } else {
                     let messageDiv = document.getElementById('message');
-                    messageDiv.innerHtml = res.message;
-                    messageDiv.style = 'display:block';
-                 }  
-
-             }) 
-
+                    messageDiv.innerHTML = res.message; 
+                    messageDiv.style.display = 'block';
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                let messageDiv = document.getElementById('message');
+                messageDiv.innerHTML = 'An error occurred. Please try again later.'; 
+                messageDiv.style.display = 'block';
             });
+        });
     </script>
 </body>
 </html>

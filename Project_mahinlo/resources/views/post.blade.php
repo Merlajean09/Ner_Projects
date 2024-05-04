@@ -21,7 +21,7 @@
             <th>Date</th>
         </tr>
     </thead>
-    <tbody>
+    <!-- <tbody>
         <tr>
             <td>1</td>
             <td>Sample Post 1</td>
@@ -34,7 +34,7 @@
             <td>Jane Smith</td>
             <td>2024-04-15</td>
         </tr>
-    </tbody>
+    </tbody> -->
 </table>
 
 </body>

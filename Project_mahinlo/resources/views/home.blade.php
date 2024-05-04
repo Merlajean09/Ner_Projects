@@ -47,14 +47,14 @@
     <table class='table'>
         <thead>
             <tr>
-                <th>Total Users</th>
+                <center><th>Total Users</th></center>
             </tr>
         </thead>
     </table>
-    <tbody>
+    <!-- <tbody>
         <tr>
             <td>1</td>
         </tr>
-    </tbody>
+    </tbody> -->
 </div>
 @endsection

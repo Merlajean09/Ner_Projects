@@ -16,12 +16,13 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
             <th>Email</th>
             <th>Role</th>
         </tr>
     </thead>
-    <tbody>
+    <!-- <tbody>
         <tr>
             <td>1</td>
             <td>Merla Jean Ner</td>
@@ -34,7 +35,7 @@
             <td>janine@gmail.com</td>
             <td>User</td>
         </tr>
-    </tbody>
+    </tbody> -->
 </table>
 
 </body>

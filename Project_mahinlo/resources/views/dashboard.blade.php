@@ -31,8 +31,12 @@
 @yield('table')
 <script>
     function logout(){
-        localStorage.removeItem('accessToken');
-        window.location.href = '/welcome';
+        const confirmLogout = confirm("Are you sure you want to logout?");
+        if(confirmLogout){
+            localStorage.removeItem('accessToken');
+            window.location.href = '/welcome';
+        }
+        
     }
 </script>
 </body>
